@@ -34,8 +34,13 @@ st.dataframe(vazio)
 st.subheader('Soma dos valores vazios em cada coluna')
 st.dataframe(soma_vazio)
 
+st.subheader('Popularidade X Duration em ms')
 st.bar_chart(data=spotify, x='popularity', y='duration_ms')
+st.subheader('Popularidade X Dançabilidade')
 st.bar_chart(data=spotify, x='popularity', y='danceability')
+st.subheader('Energia X Popularidade')
 st.line_chart(data=spotify, x='energy', y='popularity')
+st.subheader('Gênero X Popularidade')
+st.bar_chart(data=spotify, x='track_genre', y='popularity')
 
 
