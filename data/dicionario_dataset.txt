@@ -1,0 +1,60 @@
+Sobre o Dataset
+
+conteúdo
+
+Esse dataset registra mais de 125 diferentes gêneros de música do Spotify. Cada música tem variáveis associadas à ele. Os dados estão no formado CSV que é tabular e pode ser carregado rapidamente.
+
+Descrição das colunas
+
+track_id: 
+ID do Spotify para a música. 
+artists: Nome dos artistas que perfomaram a música. Se existir mais de um artista, eles vão estar separados por ;.
+album_name: 
+Nome do album na qual a música aparece.
+track_name: 
+Nome da música.
+popularity: 
+A popularidade da música é um valor que está entre 0 e 100, Sendo 100 sendo a mais popular. A popularidade é calculada por algorítmo e é baseada, 
+em grande parte, no número total de reproduções que a música teve e quão recetne essas reproduções são. 
+Em termos gerais, músicas que são tocadas bastante no momento terão popularidade maior do que músicas que foram tocadas bastante no passado. 
+Músicas duplicadas ( ex. mesma música, porém de um single e de um album) são ranqueadas independentemente. 
+Artistas e popularidade do album são derivadas matemáticamente da popularidade da música. 
+duration_ms: 
+Tamanho da música em milisegundos. 
+explicit: 
+Se a música tem tem letra explícita ou não. ( true = sim, ela tem; false = não, ela não tem ou não se sabe). 
+danceability: 
+danceability descreve o quanto uma música é adequada para dançar com base em uma combinação de elementos musicais, incluindo andamento, estabilidade do ritmo, força da batida e regularidade geral. Um valor de 0.0 é menos dançável e 1.0 é o mais dançável. 
+energy: 
+energy é uma medida de 0.0 a 1.0 e representa uma medida perceptiva de intensidade e atividade. Normalmente, as faixas energéticas parecem rápidas, altas e barulhentas. Por exemplo, death metal tem alta energia, enquanto um prelúdio de Bach pontua baixo na escala. 
+key: 
+A tonalidade em que a faixa está. Os inteiros são mapeados para as notas usando a notação padrão de classe de notas. Por exemplo. 0 = C, 1 = C♯/D♭, 2 = D e assim por diante. Se nenhuma chave foi detectada, o valor é -1. 
+loudness: 
+O volume geral de uma música em decibéis (db). 
+mode: 
+Mode indica a modalidade ( maior ou menos) de uma faixa, o tipo de escala da qual o conteúdo melógico é derivado. Maior é representado por 1 e menor é 0. 
+speechiness: 
+speechiness detecta a presença de palavras faladas em uma música. Quando mais exclusivamente semelhante a fala for à gravação (por exemplo, talk show, livro de áudio,
+poesia), mais próximo de 1.0 será o valor do atributo. Valores acima de 0.66 descrevem músicas que provavelmente são feitas inteiramente de palavras faladas. 
+Valores entre 0.33 e 0.66 descrevem músicas que podem conter música e fala, seja em seções ou em camadas, incluindo caos como rap. 
+Valores abaixo de 0.33 provavelmente representam músicas e outras faixas não semelhantes à fala. 
+acousticness: 
+Uma medida de intervalo de confiança de 0.0 a 1.0 se a faixa é acústica. 1.0 representa alta confiança de que a faixa é acústica. 
+instrumentalness: 
+Prevê se uma música não contém vocais. Os sons "ooh" e "aah" são tratados como instrumentais neste contexto. Músicas de rap ou palavras faladas são claramente "vocais". 
+Quanto mais próximo o valor de instrumentalness estiver de 1.0, maior a probabilidade de a música não conter nenhum conteúdo vocal. 
+liveness: 
+Detecta a presença de uma audiência na gravação. Valores mais altos de vivacidade repesentam uma probabilidade maior de que a música tenha sido tocada ao vivo. 
+Um valor acima de 0.8 fornece uma forte probabilidade de que a música seja ao vivo. 
+valence: 
+Uma medida de 0.0 a 1.0 que descreve a positividade musical transmitida por uma música. 
+Músicas com alta valência soam mais positivas (por exemplo, feliz, alegre, eufórica), 
+enquanto músicas com baixa valência soam mais negativas ( por exemplo, triste, deprimido, zangado). 
+tempo: 
+O andamento geral estimado de uma música em batidas por minuto (BPM). 
+Na terminologia musical, tempo é a velocidade ou ritmo de uma determinada peça e deriva diretamente da duração médias da batida. 
+time_signature: 
+um compasso de tempo estimado. O compasso é uma notação convencional para específicar quantas batidas existem em cada compasso. 
+A formula de compasso varia de 3 a 7, indicando fórmulas de compasso de 3/4 a 7/4. 
+track_genre: 
+Gênero ao qual a música pertence.
