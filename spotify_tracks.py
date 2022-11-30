@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import plotly.express as px
 
 st.title('Spotify Tracks Dataset')
 
@@ -19,8 +20,8 @@ if st.checkbox('Mostrar dataset'):
 @st.cache
 def analise():   
     medias = spotify.mean()
-    vazio = (spotify.isnull())
-    soma_vazio = (spotify.isnull().sum())
+    vazio = spotify.isnull()
+    soma_vazio = spotify.isnull().sum()
     return medias, vazio, soma_vazio
 
 medias, vazio, soma_vazio = analise()
@@ -43,4 +44,13 @@ st.line_chart(data=spotify, x='energy', y='popularity')
 st.subheader('Gênero X Popularidade')
 st.bar_chart(data=spotify, x='track_genre', y='popularity')
 
+grafico = px.treemap(spotify, path=['track_genre'])
+st.subheader('Gêneros')
+st.write(grafico)
 
+grafico = px.treemap(spotify, path=['popularity'])
+st.subheader('Popularidade')
+st.write(grafico)
+
+grafico = px.treemap(spotify, path=['popularity', 'track_genre'])
+# grafico.show()
