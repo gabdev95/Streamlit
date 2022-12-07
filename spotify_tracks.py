@@ -31,6 +31,8 @@ eixo_Y_barra = st.sidebar.selectbox(('Eixo y do gráfico de barra'),(
     'duration_ms'
 ))
 
+tamanho_grafico_barra = st.sidebar.slider('Tamanho do Gráfico de Barra', 200, 800, 400)
+
 st.sidebar.subheader('Gráficos de Linhas: ')
 eixo_X_linha = st.sidebar.selectbox('Eixo x do gráfico de linha', (
     'popularity',
@@ -43,7 +45,6 @@ eixo_X_linha = st.sidebar.selectbox('Eixo x do gráfico de linha', (
     'duration_ms'
 ))
 
-tamanho_grafico_barra = st.sidebar.slider('Tamanho do Gráfico de Barra', 200, 800, 400)
 
 
 eixo_Y_linha = st.sidebar.selectbox(('Eixo y do gráfico de linha'),(
