@@ -32,44 +32,55 @@ class _WidgetLoginState extends State<WidgetLogin> {
     return Scaffold(
       body: Container(
         padding: const EdgeInsets.all(50),
-        
+
         // Imagem (Logo)
         child: ListView(
           children: <Widget>[
-            const SizedBox(height: 100,),
-            SizedBox(width: 280, height: 216, child: Image.asset("assets/logo.png")),
-            const SizedBox(height: 80,),
+            const SizedBox(
+              height: 100,
+            ),
+            SizedBox(
+                width: 280, height: 216, child: Image.asset("assets/logo.png")),
+            const SizedBox(
+              height: 80,
+            ),
 
             // TextFormField E-mail
             TextFormField(
               style: const TextStyle(color: Colors.black),
               obscureText: false,
               decoration: InputDecoration(
-                filled: true,
-                fillColor: Colors.white,
-                contentPadding: const EdgeInsets.fromLTRB(25.0, 10.0, 25.0, 1.0),
-                hintText: "E-mail",
-                hintStyle: const TextStyle(color: Colors.grey),
-                border: OutlineInputBorder(borderRadius: BorderRadius.circular(10))
-              ),
+                  filled: true,
+                  fillColor: Colors.white,
+                  contentPadding:
+                      const EdgeInsets.fromLTRB(25.0, 10.0, 25.0, 1.0),
+                  hintText: "E-mail",
+                  hintStyle: const TextStyle(color: Colors.grey),
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10))),
             ),
-            const SizedBox(height: 30,),
+            const SizedBox(
+              height: 30,
+            ),
 
             // TextFormField Senha
             TextFormField(
               style: const TextStyle(color: Colors.black),
               obscureText: true,
               decoration: InputDecoration(
-                filled: true,
-                fillColor: Colors.white,
-                contentPadding: const EdgeInsets.fromLTRB(25.0, 10.0, 25.0, 1.0),
-                hintText: "Senha",
-                hintStyle: const TextStyle(color: Colors.grey),
-                border: OutlineInputBorder(borderRadius: BorderRadius.circular(10))
-              ),
+                  filled: true,
+                  fillColor: Colors.white,
+                  contentPadding:
+                      const EdgeInsets.fromLTRB(25.0, 10.0, 25.0, 1.0),
+                  hintText: "Senha",
+                  hintStyle: const TextStyle(color: Colors.grey),
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10))),
             ),
-            const SizedBox(height: 30,),
-            
+            const SizedBox(
+              height: 30,
+            ),
+
             // Button Entrar
             Container(
               height: 41.0,
@@ -85,7 +96,10 @@ class _WidgetLoginState extends State<WidgetLogin> {
                     children: const [
                       Text(
                         "Entrar",
-                        style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 18),
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                            fontSize: 18),
                       )
                     ],
                   ),
@@ -94,8 +108,10 @@ class _WidgetLoginState extends State<WidgetLogin> {
                 ),
               ),
             ),
-            const SizedBox(height: 17,),
-            
+            const SizedBox(
+              height: 17,
+            ),
+
             // Redireciona para page cadastro
             Container(
               height: 20,
@@ -104,18 +120,17 @@ class _WidgetLoginState extends State<WidgetLogin> {
                 child: TextButton(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: const <Widget> [
+                    children: const <Widget>[
                       Text.rich(
                         TextSpan(
-                          text: "Não possui uma conta? ",
-                          style: TextStyle(color: Colors.white, fontSize: 16),
-                          children: <TextSpan>[
-                            TextSpan(
-                              text: "Cadastre-se",
-                              style: TextStyle(decoration: TextDecoration.underline)
-                            )
-                          ]
-                        ),
+                            text: "Não possui uma conta? ",
+                            style: TextStyle(color: Colors.white, fontSize: 16),
+                            children: <TextSpan>[
+                              TextSpan(
+                                  text: "Cadastre-se",
+                                  style: TextStyle(
+                                      decoration: TextDecoration.underline))
+                            ]),
                       ),
                     ],
                   ),
@@ -124,7 +139,6 @@ class _WidgetLoginState extends State<WidgetLogin> {
                 ),
               ),
             ),
-
           ],
         ),
       ),
