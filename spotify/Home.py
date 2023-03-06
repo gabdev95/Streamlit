@@ -6,7 +6,7 @@ import plotly.express as px
 
 st.set_page_config(
     page_title='Limpeza', 
-    page_icon='random', 
+    page_icon='assets\logo.png', 
     layout='wide', 
     initial_sidebar_state='auto', 
     menu_items=None
