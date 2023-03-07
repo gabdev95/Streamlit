@@ -42,7 +42,7 @@ eixo_x_barra_horizontal_1 = st.sidebar.selectbox(
         'compasso',
     ))
 
-
+st.sidebar.write('-----------------------------------------------')
 # st.sidebar.subheader('Gráfico de Barra Horizontal 2: ')
 # eixo_y_barra_horizontal_2 = st.sidebar.selectbox(
 #     'Eixo Y - gráfico de barra horizontal 2', (
@@ -98,14 +98,14 @@ eixo_y_barra_horizontal_3 = st.sidebar.selectbox(
         'disney', 'dub', 'edm', 'eletronic', 'folk', 'fench', 
         'garage', 'gospel', 'grindcore', 'grunge', 'happy', 
         'hardcore', 'heavy-metal', 'honky-tonky', 'idm', 'indie', 
-        'industrial', 'j-dance', 'j-pop', 'jazz', 'kids', 'latino', 
+        'industrial', 'j-dance', 'j-pop', 'jazz', 'kids', 'k-pop', 'latino', 
         'mandopop', 'metalcore', 'mpb', 'opera', 'árty', 'pop', 'power-pop', 
         'psych-pop', 'punk-rock', 'regge', 'rock', 'rockabilly', 
         'sad', 'samba', 'show-tunes', 'ska', 'songwriter', 'spanish', 
         'swedish', 'tango', 'trance', 'turkish',
     ))
 
-
+st.sidebar.write('-----------------------------------------------')
 
 st.sidebar.subheader('Gráfico de Barra Horizontal 3: ')
 
@@ -142,6 +142,8 @@ eixo_y_barra_horizontal_4 = st.sidebar.selectbox(
         'sad', 'samba', 'show-tunes', 'ska', 'songwriter', 'spanish', 
         'swedish', 'tango', 'trance', 'turkish',
     ))
+
+st.sidebar.write('-----------------------------------------------')
 
 st.sidebar.subheader('Gráfico de Caixa (Boxplot): ')
 
@@ -215,7 +217,7 @@ st.bar_chart(data=nd, x=eixo_x_barra_horizontal_1, y='genero')
 
 st.subheader('• Gráfico de Barra Horizontal 2')
 st.caption('''Neste gráfico é possível escolher um gênero (eixo Y) e ele lhe retornará os artistas mais famosos do gênero escolhido.
-           E aprtir disto é possível fazer análises com as outras colunas a sua escolha do datset (eixo X).''')
+           E a partir disto é possível fazer análises com as outras colunas a sua escolha do dataset (eixo X).''')
 
 genre = nd.loc[nd['genero']==eixo_y_barra_horizontal_3]
 genre_10 = genre.sort_values(by='popularidade', ascending=False).head(10)
@@ -236,7 +238,7 @@ artist_10
 
 st.subheader('• Gráfico de Barra Horizontal 3')
 st.caption('''Neste gráfico é possível escolher um gênero (eixo Y) e ele lhe retornará as músicas mais famosas do gênero escolhido.
-           E aprtir disto é possível fazer análises com as outras colunas a sua escolha do datset (eixo X).''')
+           E a partir disto é possível fazer análises com as outras colunas a sua escolha do dataset (eixo X).''')
 
 name = nd.loc[nd['genero']==eixo_y_barra_horizontal_4]
 name_10 = genre.sort_values(by='popularidade', ascending=False).head(10)
@@ -257,7 +259,7 @@ nome_10
 
 st.subheader('• Gráfico de Caixa (Boxplot)')
 st.caption('''Diagrama de Caixa fornece um resumo visual rápido da variabilidade de valores em um conjunto de dados. 
-            Eles mostram os valores medianos, quartis superiores e inferiores, valores mínimo e máximo e 
+            Eles mostram os valores medianos, quantos superiores e inferiores, valores mínimo e máximo e 
             quaisquer valores atípicos no conjunto de dados.''')
 
 plt.rcdefaults()
