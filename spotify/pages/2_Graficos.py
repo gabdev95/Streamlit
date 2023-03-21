@@ -290,7 +290,7 @@ with col7:
 
 with col8:
     genero_boxplot = st.selectbox(
-        'Eixo Y - gráfico de músicas mais famosas por gênero',
+        'Gênero - gráfico de caixa',
         ('acoustic', 'alt-rock', 'ambient', 
             'black-metal', 'blues', 'breakbeat', 
             'cantopop', 'children', 'classical', 
