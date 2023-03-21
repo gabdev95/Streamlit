@@ -229,7 +229,7 @@ with col5:
     
 with col6:   
     eixo_y_barra_musica_Nfamosa = st.selectbox(
-        'Eixo Y - gráfico de músicas mais famosas por gênero',
+        'Eixo Y - gráfico de músicas menos famosas por gênero',
         ('acoustic', 'alt-rock', 'ambient', 
             'black-metal', 'blues', 'breakbeat', 
             'cantopop', 'children', 'classical', 
