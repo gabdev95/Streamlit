@@ -110,12 +110,12 @@ plt.ylabel("Score da silhuetta")
 plt.title("Análise da silhuetta para o K ótimo")
 plt.show()
 ''')
-st.image('assets\image_silhueta1.png')
+st.image('assets\silhuettaKotimo.png')
 st.code('''
-range_n_clusters = [2, 3, 4, 5, 6]
+range_n_clusters = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 silhouette_avg_n_clusters = []
 ig, ax = plt.subplots(2, 2, figsize=(15,8))
-for i in [2, 3, 4, 5]:
+for i in [2, 3, 4, 5, 6, 7, 8, 9, 10, 11]:
     Create KMeans instance for different number of clusters
     
     km = KMeans(n_clusters=i, init='k-means++', n_init=10, max_iter=100, random_state=42)
@@ -127,7 +127,26 @@ for i in [2, 3, 4, 5]:
     visualizer = SilhouetteVisualizer(km, colors='yellowbrick', ax=ax[q-1][mod])
     visualizer.fit(X) 
 ''')
-st.image('assets\image_silhueta2.png')
+st.markdown('##### Resultados Cluster 2')
+st.image('assets\grafico_silhueta_cluster2.png')
+st.markdown('##### Resultados Cluster 3')
+st.image('assets\grafico_silhueta_cluster3.png')
+st.markdown('##### Resultados Cluster 4')
+st.image('assets\grafico_silhueta_cluster4.png')
+st.markdown('##### Resultados Cluster 5')
+st.image('assets\grafico_silhueta_cluster5.png')
+st.markdown('##### Resultados Cluster 6')
+st.image('assets\grafico_silhueta_cluster6.png')
+st.markdown('##### Resultados Cluster 7')
+st.image('assets\grafico_silhueta_cluster7.png')
+st.markdown('##### Resultados Cluster 8')
+st.image('assets\grafico_silhueta_cluster8.png')
+st.markdown('##### Resultados Cluster 9')
+st.image('assets\grafico_silhueta_cluster9.png')
+st.markdown('##### Resultados Cluster 10')
+st.image('assets\grafico_silhueta_cluster10.png')
+st.markdown('##### Resultados Cluster 11')
+st.image('assets\grafico_silhueta_cluster11.png')
 st.markdown('#### 7. Finalização')
 st.markdown('##### 7.1. Salvando o tipo de cluster de cada coluna numa nova coluna na tabela original:')
 st.code('''
