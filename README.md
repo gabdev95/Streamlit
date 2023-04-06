@@ -5,7 +5,7 @@ Projeto desenvolvido durante a disciplina de PISI3.
 
 Para início das análises criou-se um dashboard que é uma ferramenta que permite visualizar e analisar dados de forma interativa, utilizando o Streamlit um framework em Python que permite criar dashboards de maneira rápida e fácil. Pois graças ao Streamlit, é possível criar uma interface de usuário em que os dados são atualizados automaticamente à medida que novos dados são adicionados. Além disso, é possível adicionar gráficos, tabelas e outros elementos interativos que permitem ao usuário visualizar e analisar os dados de forma mais eficiente. 
 
-<img height="200em" src="/spotify/assets/dataset.jpeg">
+
 
 Acima é mostrado uma captura de tela do sistema framework Streamlit. O sistema está dividido em 5 abas principais: Home, Análises Fixas, Análises Interativas, Clusterização e Análises Pós Machine Learning. Na aba Home, está localizado o tratamento dos dados, na aba Análises Fixas encontram-se gráficos fixos, com análises fixas com textos descritivos, na aba Análises Interativas encontra-sem gráficos interativos onde pessoas com conhecimento para análises podem fazer análises personalizadas, sendo possível a identificação de padrões e tendência nos dados, como também outliers, valores ausentes e etc, na aba Clusterização, está localizado o passo-a-passo do processo de clusterização dos dados e por fim na aba Análises Pós Machine Learning encontra-se respostas para perguntas mencionadas nos “Objetivos” do trabalho.	
 
