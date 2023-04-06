@@ -7,17 +7,20 @@ import random
 import seaborn as sns
 
 st.set_page_config(
-    page_title='Análises Preliminares', 
+    page_title='Análises', 
     page_icon='assets\logo.png', 
     layout='wide', 
     initial_sidebar_state='auto', 
     menu_items=None
 )
 
-st.title('Análises Preliminares')
-st.caption('Nos gráficos abaixo você é livre para escolher os dados de análise para os eixos de x, y ou ambos.')
-
+st.title('Análises Interativas')
 nd = pd.read_parquet('dataset_sem_inconsistencias.parquet')
+
+st.caption('''
+Os gráficos abaixo são os mesmos que foram exibidos nas Análises Fixas, porém aqui os mesmos são destinados para aqueles que desejam e tem certa experiência em 
+manipular eixos x e y dos gráifcos para obter análises personalizadas.
+''')
 
 # Esse comando deixa o carregamento muito lento
 # media = nd.mean(numeric_only=True)
@@ -71,7 +74,7 @@ nd = pd.read_parquet('dataset_sem_inconsistencias.parquet')
 #st.bar_chart(data=nd, x=eixo_x_barra_geral, y='genero')
 
 st.subheader('• Gráfico de calor')
-st.caption('''Um gráfico de calor, também conhecido como mapa de calor, é uma visualização gráfica de dados que utiliza cores para representar valores numéricos de uma matriz. 
+st.write('''Um gráfico de calor, também conhecido como mapa de calor, é uma visualização gráfica de dados que utiliza cores para representar valores numéricos de uma matriz. 
 Essa representação gráfica pode ser usada para identificar padrões e tendências em grandes conjuntos de dados e é especialmente útil quando há muitos dados a serem analisados.
 Neste gráfico você pode fazer análises com as colunas do dataset que preferir para o eixo X, analisando sua relação com todos os gêneros presentes no dataset.''')
 
@@ -94,7 +97,7 @@ eixo_x_calor_geral = st.selectbox(
 
 tabela_frequencia = pd.pivot_table(nd, index='genero', columns=eixo_x_calor_geral, aggfunc='size', fill_value=0)
 fig, ax = plt.subplots()
-sns.heatmap(tabela_frequencia, cmap='YlGnBu', ax=ax)
+sns.heatmap(tabela_frequencia, cmap='RdYlBu', ax=ax, vmin=1)
 st.pyplot(fig)
 
 # st.subheader('Gráfico de Barra Horizontal 2')
@@ -116,7 +119,7 @@ st.pyplot(fig)
 # tamanho
 
 st.subheader('• Gráfico de artistas mais famosos por gênero')
-st.caption('''Neste gráfico é possível escolher um gênero (eixo Y) e ele lhe retornará os artistas mais famosos do gênero escolhido.
+st.write('''Neste gráfico é possível escolher um gênero (eixo Y) e ele lhe retornará os artistas mais famosos do gênero escolhido.
            E a partir disto é possível fazer análises com as outras colunas a sua escolha do dataset (eixo X).''')
 
 col1, col2 = st.columns(2)
@@ -174,7 +177,7 @@ st.pyplot(fig)
 artist_10
 
 st.subheader('• Gráfico de músicas mais famosas por gênero')
-st.caption('''Neste gráfico é possível escolher um gênero (eixo Y) e ele lhe retornará as músicas mais famosas do gênero escolhido.
+st.write('''Neste gráfico é possível escolher um gênero (eixo Y) e ele lhe retornará as músicas mais famosas do gênero escolhido.
            E a partir disto é possível fazer análises com as outras colunas a sua escolha do dataset (eixo X).''')
 
 col3, col4 = st.columns(2)
@@ -231,7 +234,7 @@ st.pyplot(fig)
 nome_10maisfamosas
 
 st.subheader('• Gráfico de músicas menos famosas por gênero')
-st.caption('''Neste gráfico é possível escolher um gênero (eixo Y) e ele lhe retornará as músicas menos famosas do gênero escolhido.
+st.write('''Neste gráfico é possível escolher um gênero (eixo Y) e ele lhe retornará as músicas menos famosas do gênero escolhido.
            E a partir disto é possível fazer análises com as outras colunas a sua escolha do dataset (eixo X).''')
 
 col5, col6 = st.columns(2)
@@ -291,7 +294,7 @@ st.pyplot(fig)
 menos_famosas
 
 st.subheader('• Gráfico de Caixa (Boxplot)')
-st.caption('''Diagrama de Caixa fornece um resumo visual rápido da variabilidade de valores em um conjunto de dados. 
+st.write('''Diagrama de Caixa fornece um resumo visual rápido da variabilidade de valores em um conjunto de dados. 
             Eles mostram os valores medianos, quantos superiores e inferiores, valores mínimo e máximo e 
             quaisquer valores atípicos no conjunto de dados.''')
 

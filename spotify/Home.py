@@ -5,16 +5,35 @@ import matplotlib.pyplot as plt
 import plotly.express as px
 
 st.set_page_config(
-    page_title='Limpeza', 
+    page_title='Home/Limpeza', 
     page_icon='assets\logo.png', 
     layout='wide',
     initial_sidebar_state='auto', 
     menu_items=None
 )
 
-antigo_dataset = pd.read_csv('dataset.csv')
+col1, col2 = st.columns([5,1])
+
+with col1:
+    st.markdown("## Equipe DataHunters")
+
+    st.markdown("""
+    ### Integrantes:
+
+    - Abinoã Menezes
+    - Gabriele de Medeiros
+    - Joel Fausto
+    - Miguel Nunes
+    - Vitor Mateus
+    """)
+
+with col2:
+    imagem = 'assets\logo.png'
+    st.image(imagem, width=250)
 
 st.title('Limpeza do dataset')
+
+antigo_dataset = pd.read_csv('dataset.csv')
 
 st.subheader('Dataset inicial')
 antigo_dataset
