@@ -24,9 +24,9 @@ não queríamos fazer uma playlist considerando o tipo de gênero ao qual ela pe
 foi feita uma transformação nos dados de “explicit” de “false” “true” para 0 e 1 e posteriormente todos os dados foram normalizados. 
 ''')
 
-st.markdown('### Pergunta 2: Uma playlist criada a partir de uma música amostra, gera especificamente músicas com gêneros similares ao da música amostra?')
+st.markdown('### Pergunta 2: Uma playlist criada a partir de uma música selecionada pelo usuário, gera especificamente músicas com gêneros similares ao da música amostra?')
 st.markdown('''O objetivo geral deste trabalho é o de desenvolver uma ferramenta de recomendação de músicas para os usuários. Com esse objetivo em mente, optou-se por colocar
-Uma vez separadas as músicas do nosso banco de dados em clusters, foi possível fazer essa análise. A conclusão encontrada é de que uma playlist criada a partir de uma música amostra, 
+Uma vez separadas as músicas do nosso banco de dados em clusters, foi possível fazer essa análise. A conclusão encontrada é de que uma playlist criada a partir de uma música selecionada pelo usuário, 
 não gera especificamente músicas com gêneros similares ao da música amostra. E foi utilizado do seguinte código para comprovar disto:''')
 st.code('''
 import numpy as np # linear algebra
